@@ -1,4 +1,4 @@
-<img width="3163" height="715" alt="horizontal-logo" src="https://github.com/user-attachments/assets/76e88004-39e9-4654-b840-ac91ebc81102" />
+<img width="5046" height="1141" alt="Horizontal-black" src="https://github.com/user-attachments/assets/7b2fbdfe-79eb-477e-b209-510f1dd8ec5d" />
 
 # CompiletSDK
 
