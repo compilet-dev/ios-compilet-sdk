@@ -2,8 +2,6 @@
 //  LaunchView.swift
 //  CompiletDemo
 //
-//  Created by Minh Nguyen on 15/09/2025.
-//
 
 import SwiftUI
 

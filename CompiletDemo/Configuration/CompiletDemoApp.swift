@@ -2,8 +2,6 @@
 //  CompiletDemoApp.swift
 //  CompiletDemo
 //
-//  Created by Minh Nguyen on 15/09/2025.
-//
 
 import SwiftUI
 import CompiletSDK
@@ -26,6 +24,8 @@ struct CompiletDemoApp: App {
   var body: some Scene {
     WindowGroup {
       RootView()
+        .toolbarColorScheme(.dark, for: .navigationBar)
+        .preferredColorScheme(.dark)
     }
   }
 }

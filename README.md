@@ -49,7 +49,11 @@ Release Notes can be found [here]([https://web-compilet.dev.compilet.dev/article
 
 # [Support](#support)
 
-In order for us to provide optimal support, we would kindly ask you to submit any issues to support@compilet.com
-When submitting an issue please specify your Compilet sign-up (account) email , your app ID , reproduction steps, logs, code snippets and any additional relevant information.
+- To help us provide optimal support, please submit any issues to **[support@compilet.com](mailto:support@compilet.com)**.
 
-
+- When submitting an issue, please include:
+  - Your Compilet sign-up (account) email
+  - Your app ID 
+  - Steps to reproduce the issue 
+  - Logs and code snippets 
+  - Any additional relevant information

@@ -2,8 +2,6 @@
 //  ContentView.swift
 //  CompiletDemo
 //
-//  Created by Minh Nguyen on 15/09/2025.
-//
 
 import SwiftUI
 import CompiletSDK
@@ -22,28 +20,6 @@ struct MainView: View {
               title: "Chat",
               subtitle: "Test chat feature",
               icon: "message"
-            )
-          }
-          
-          NavigationLink {
-            AgentsListView()
-          } label: {
-            FeatureRowView(
-              title: "Agents",
-              subtitle: "Test agent features",
-              icon: "person.fill"
-            )
-          }
-          
-          NavigationLink {
-            Text("Feature C Screen")
-              .font(.title)
-              .bold()
-          } label: {
-            FeatureRowView(
-              title: "Feature C",
-              subtitle: "Placeholder for future features",
-              icon: "gear"
             )
           }
         }

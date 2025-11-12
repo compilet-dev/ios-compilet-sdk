@@ -2,8 +2,6 @@
 //  KeyboardResponder.swift
 //  CompiletDemo
 //
-//  Created by Minh Nguyen on 18/09/2025.
-//
 
 import SwiftUI
 

@@ -2,8 +2,6 @@
 //  ChatBotViewModel.swift
 //  CompiletDemo
 //
-//  Created by Minh Nguyen on 17/09/2025.
-//
 
 import SwiftUI
 import CompiletSDK

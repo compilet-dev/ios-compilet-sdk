@@ -2,8 +2,6 @@
 //  SessionConfigAlertView.swift
 //  CompiletDemo
 //
-//  Created by Minh Nguyen on 03/11/2025.
-//
 
 import SwiftUI
 import CompiletSDK
