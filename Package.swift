@@ -15,8 +15,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "CompiletSDK",
-      url: "https://github.com/compilet-dev/ios-compilet-sdk/releases/download/0.1.0/CompiletSDK.xcframework.zip",
-      checksum: "849026814e0b770cfa5c141a3df2e44140a706395c95ec7eb3bf9678c4b853b2"
+      url: "https://github.com/compilet-dev/ios-compilet-sdk/releases/download/1.0.0/CompiletSDK.xcframework.zip",
+      checksum: "9479831b414bd4355af70912cf9b6f668eac9fe001d43fc30ced7f4f02820657"
     )
   ]
 )
