@@ -9,7 +9,7 @@
 # Table Of Contents
 
 1. [Overview](#overview)
-1. [Swift Package Manager](#SwiftPackageManager)
+1. [Swift Package Manager](#swift-package-manager)
 1. [Integration](#integration)
 1. [Support](#support)
 
@@ -25,7 +25,7 @@
 
 ---
 
-# [Swift Package Manager](#SwiftPackageManager)
+# [Swift Package Manager](#swift-package-manager)
 
 1. **Add a Swift Package File**
    - In your Xcode project, go to **File** > **Swift Packages** > **Add Package Dependency**.
