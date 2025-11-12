@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		068510A22EC463E00070EDE6 /* CompiletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 068510A12EC463E00070EDE6 /* CompiletSDK */; };
+		0640EBA72EC46751007586EA /* CompiletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 0640EBA62EC46751007586EA /* CompiletSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				068510A22EC463E00070EDE6 /* CompiletSDK in Frameworks */,
+				0640EBA72EC46751007586EA /* CompiletSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +92,7 @@
 			);
 			name = CompiletDemo;
 			packageProductDependencies = (
-				068510A12EC463E00070EDE6 /* CompiletSDK */,
+				0640EBA62EC46751007586EA /* CompiletSDK */,
 			);
 			productName = CompiletDemo;
 			productReference = 063EACCB2E78023C0067D9AD /* CompiletDemo.app */;
@@ -123,7 +123,7 @@
 			mainGroup = 063EACC22E78023C0067D9AD;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				068510A02EC463E00070EDE6 /* XCRemoteSwiftPackageReference "ios-compilet-sdk" */,
+				0640EBA52EC46751007586EA /* XCRemoteSwiftPackageReference "ios-compilet-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 063EACCC2E78023C0067D9AD /* Products */;
@@ -374,20 +374,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		068510A02EC463E00070EDE6 /* XCRemoteSwiftPackageReference "ios-compilet-sdk" */ = {
+		0640EBA52EC46751007586EA /* XCRemoteSwiftPackageReference "ios-compilet-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/compilet-dev/ios-compilet-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		068510A12EC463E00070EDE6 /* CompiletSDK */ = {
+		0640EBA62EC46751007586EA /* CompiletSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 068510A02EC463E00070EDE6 /* XCRemoteSwiftPackageReference "ios-compilet-sdk" */;
+			package = 0640EBA52EC46751007586EA /* XCRemoteSwiftPackageReference "ios-compilet-sdk" */;
 			productName = CompiletSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
