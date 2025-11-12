@@ -9,7 +9,7 @@
 # Table Of Contents
 
 1. [Overview](#overview)
-1. [Swift Package Manager](#SPM)
+1. [Swift Package Manager](#swift-package-manager)
 1. [Integration](#integration)
 1. [Support](#support)
 
@@ -17,7 +17,7 @@
 
 **CompiletSDK** is an AI-First iOS SDK designed to empower solo founders and small teams to build AI-native applications effortlessly.
 
-- 🧩 Multi-provider architecture – seamlessly integrate with multiple LLM providers like OpenAI, Anthropic, and more through a unified API.
+- 🧩 Multi-provider architecture – seamlessly integrate with multiple LLM providers like OpenAI, Google Gemini, and more through a unified API.
 - ⚙️ Lightweight & modular – built with BUILD_LIBRARY_FOR_DISTRIBUTION=YES for flexible integration.
 - 🧠 AI & analytics ready – provides tools to accelerate intelligent feature development.
 - 📦 Swift Package Manager support – easy to install and maintain.
@@ -25,7 +25,7 @@
 
 ---
 
-# [Swift Package Manager](#SPM)
+# [Swift Package Manager](#swift-package-manager)
 
 1. **Add a Swift Package File**
    - In your Xcode project, go to **File** > **Swift Packages** > **Add Package Dependency**.
@@ -43,9 +43,9 @@
 
 # [Integration](#integration)
 
-In order to get instruction on how to integrate Compilet SDK please visit the following page - [iOS SDK](https://web-compilet.dev.compilet.dev/docs).
+In order to get instruction on how to integrate Compilet SDK please visit the following page - [iOS SDK]([https://web-compilet.dev.compilet.dev/docs](https://web-compilet.dev.compilet.dev/docs/introduction)).
 
-Release Notes can be found [here](https://web-compilet.dev.compilet.dev/articles/115001224823#ios-sdk-v1-release-notes).
+Release Notes can be found [here]([https://web-compilet.dev.compilet.dev/articles/115001224823#ios-sdk-v1-release-notes](https://web-compilet.dev.compilet.dev/docs/ios/release-notes)).
 
 # [Support](#support)
 
