@@ -3,8 +3,8 @@
 //  CompiletDemo
 //
 
-import SwiftUI
 import CompiletSDK
+import SwiftUI
 
 @MainActor
 final class DetailChatViewModel: ObservableObject {
@@ -17,54 +17,78 @@ final class DetailChatViewModel: ObservableObject {
   init(session: ChatSession) {
     self.session = session
   }
-  
-  func sendMessage(_ message: String, completion: @escaping () -> Void) async {
-    messages.append(Message(content: message, isCurrentUser: true))
+}
+
+// MARK: - Public functions
+extension DetailChatViewModel {
+  func send(
+    contents: [CompiletSDK.Message], displayText: String, attachments: [ChatAttachment],
+    completion: @escaping () -> Void
+  ) async {
+    messages.append(Message(text: displayText, attachments: attachments, isCurrentUser: true))
     completion()
     isAIResponding = true
     
     do {
-      let response = try await session.chatShortcut.send(message)
-      messages.append(Message(content: response.aiMessage.text ?? ""))
+      let response = try await session.chatShortcut.send(contents)
+      messages.append(
+        Message(text: response.aiMessage.text ?? "", attachments: [], isCurrentUser: false))
     } catch {
-      messages.append(Message(content: "Error: \(error.localizedDescription)", isCurrentUser: false))
+      messages.append(
+        Message(text: "Unable to respond at the moment: \(getErrorMessage(error))", attachments: [], isCurrentUser: false)
+      )
     }
     
     isAIResponding = false
   }
   
-  func streamMessage(_ message: String, completion: (() -> Void)? = nil) {
-    messages.append(Message(content: message, isCurrentUser: true))
+  func stream(
+    contents: [CompiletSDK.Message], displayText: String, attachments: [ChatAttachment],
+    completion: (() -> Void)? = nil
+  ) {
+    messages.append(Message(text: displayText, attachments: attachments, isCurrentUser: true))
     completion?()
     
-    // Add placeholder AI message
-    messages.append(Message(content: "", isCurrentUser: false))
+    messages.append(Message(text: "", attachments: [], isCurrentUser: false))
     isAIResponding = true
     
     Task {
       do {
-        let stream = try await session.chatShortcut.stream(message)
-        
+        let stream = try await session.chatShortcut.stream(contents)
         for try await response in stream {
           guard let lastIndex = messages.indices.last,
-                let text = response.message else { continue }
+                let text = response.message
+          else { continue }
           
           switch response {
           case .partialResponse:
-            messages[lastIndex].content += text
+            messages[lastIndex].text += text
           case .completeResponse:
-            messages[lastIndex].content = text
+            messages[lastIndex].text = text
           default:
             break
           }
         }
       } catch {
-        if let lastIndex = messages.indices.last {
-          messages[lastIndex].content = "Unable to respond at the moment: \(error.localizedDescription)"
+        guard let lastIndex = messages.indices.last else {
+          return
         }
+        
+        messages[lastIndex].text = "Unable to respond at the moment: \(getErrorMessage(error))"
       }
       
       isAIResponding = false
     }
+  }
+}
+
+// MARK: - Private functions
+extension DetailChatViewModel {
+  func getErrorMessage(_ error: Error) -> String {
+    guard let compiletError = error as? CompiletError else {
+      return error.localizedDescription
+    }
+    
+    return compiletError.errorDescription ?? compiletError.localizedDescription
   }
 }

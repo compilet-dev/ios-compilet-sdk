@@ -5,20 +5,26 @@
 
 import SwiftUI
 
-struct MessageView : View {
+struct MessageView: View {
   var currentMessage: Message
   var isTyping: Bool = false
+  
+  @ViewBuilder
+  private var content: some View {
+    ContentMessageView(
+      text: currentMessage.text,
+      attachments: currentMessage.attachments,
+      isCurrentUser: currentMessage.isCurrentUser,
+      isTyping: isTyping
+    )
+  }
   
   var body: some View {
     HStack(alignment: .bottom, spacing: 15) {
       if currentMessage.isCurrentUser {
         Spacer()
       }
-      ContentMessageView(
-        contentMessage: currentMessage.content,
-        isCurrentUser: currentMessage.isCurrentUser,
-        isTyping: isTyping
-      )
+      content
       if !currentMessage.isCurrentUser {
         Spacer()
       }

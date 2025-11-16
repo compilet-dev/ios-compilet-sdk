@@ -7,12 +7,18 @@ import Foundation
 
 struct Message: Identifiable, Equatable {
   let id: UUID
-  var content: String
-  var isCurrentUser: Bool = false
+  var text: String
+  var attachments: [ChatAttachment]
+  var isCurrentUser: Bool
   
-  init(content: String, isCurrentUser: Bool = false) {
+  init(
+    text: String,
+    attachments: [ChatAttachment] = [],
+    isCurrentUser: Bool = false
+  ) {
     self.id = UUID()
-    self.content = content
+    self.text = text
+    self.attachments = attachments
     self.isCurrentUser = isCurrentUser
   }
 }
